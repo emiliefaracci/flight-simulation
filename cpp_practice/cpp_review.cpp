@@ -29,6 +29,7 @@ void iterate_through(std::string str) {
     for (int i=0; i < str.size(); i++) {
         std::cout << str[i]; 
     }
+    std::cout << "\n";
 }
 
 void iterate(char* array) {
@@ -37,6 +38,7 @@ void iterate(char* array) {
         std::cout << array[i]; 
         //not using std::endl doesn't flush the buffer. 
     }
+    std::cout << "\n";
 }
 
 int main() {
