@@ -18,9 +18,7 @@ void SwapEnd(T& var)
     std::memcpy(&var, varArray.data(), sizeof(T));
 }
 
-
-int main() {
-    int value = 0x12345678;
+void verifyEndian(int &value) {
 
     if(*(int *)&value == 0x12345678)
     {
@@ -30,6 +28,13 @@ int main() {
     {
         std::cout << "\nBig-Endian\n" << std::endl;
     }
+}
+
+
+int main() {
+    int value = 0x12345678;
+
+    verifyEndian(value);
 
     SwapEnd(value);
 
